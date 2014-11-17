@@ -6,7 +6,6 @@
 #include <pthread.h>
 #include "dso.hh"
 
-
 /** Receives time-series from a @c DSOBuffer and collects them for plotting. */
 class PlotBuffer : public QObject, public sdr::Sink<int16_t>
 {
