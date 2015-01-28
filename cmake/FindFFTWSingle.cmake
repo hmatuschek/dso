@@ -12,7 +12,7 @@ endif (FFTWSingle_INCLUDES)
 
 find_path (FFTWSingle_INCLUDES fftw3.h)
 
-find_library (FFTWSingle_LIBRARIES NAMES fftw3f)
+find_library (FFTWSingle_LIBRARIES NAMES fftw3f fftw3f-3)
 
 # handle the QUIETLY and REQUIRED arguments and set FFTW_FOUND to TRUE if
 # all listed variables are TRUE

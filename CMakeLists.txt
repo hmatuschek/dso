@@ -5,15 +5,19 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 include(InstallHeadersWithDirectory)
 
 find_package(Qt5Core REQUIRED)
-find_package(Qt5Declarative REQUIRED)
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5LinguistTools REQUIRED)
 
 find_package(FFTW REQUIRED)
 find_package(FFTWSingle REQUIRED)
 find_package(PortAudio REQUIRED)
-
 find_package(Libsdr)
+
+IF(NOT THREAD_LIBS)
+ find_package(Threads REQUIRED)
+ SET(THREAD_LIBS ${CMAKE_THREAD_LIBS_INIT})
+ENDIF(NOT THREAD_LIBS)
+
 
 ADD_DEFINITIONS(${Qt5Widgets_DEFINITIONS})
 
@@ -37,7 +41,9 @@ IF(NOT LIBSDR_FOUND)
 ENDIF(NOT LIBSDR_FOUND)
 
 LINK_DIRECTORIES(${PROJECT_BINARY_DIR}/src)
-set(LIBS ${FFTW_LIBRARIES} ${FFTWSingle_LIBRARIES} ${PORTAUDIO_LIBRARIES} "pthread")
+
+set(LIBS ${FFTW_LIBRARIES} ${FFTWSingle_LIBRARIES} ${PORTAUDIO_LIBRARIES} ${THREAD_LIBS})
+
 
 # Set compiler flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS} -Wall")
