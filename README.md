@@ -14,7 +14,7 @@ Initially, I needed such a software to record the signals of a simple home-brew 
 ## Install
 
 Binary installers for Windows and MacOS X can be downloaded from the [releases](https://github.com/hmatuschek/dso/releases) page. Binaries for
-a varity of Linux distributions are available at the [OpenSUSE build service].
+a variety of Linux distributions are available at the [OpenSUSE build service].
 
 
 ## License
