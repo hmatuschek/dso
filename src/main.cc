@@ -3,7 +3,7 @@
 #include <QMainWindow>
 #include <QLocale>
 #include <QTranslator>
-
+#include <QDebug>
 #include "dso.hh"
 
 
@@ -14,7 +14,8 @@ int main(int argc, char *argv[]) {
 
   QString locale = QLocale::system().name();
   QTranslator translator;
-  translator.load(QString(":/i18n/%1.qm").arg(locale));
+  qDebug() << "Load locale" <<locale
+           << ":" << translator.load(QString(":/i18n/%1.qm").arg(locale));
   dso.installTranslator(&translator);
 
   QMainWindow win;

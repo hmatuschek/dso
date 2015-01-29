@@ -2,8 +2,10 @@
     <qresource prefix="/i18n">
         <file alias="de_DE.qm">dso_de_DE.qm</file>
     </qresource>
-    <qresource prefix="/doc">
-        <file alias="about_en_EN.html">dso_about_en_EN.html</file>
-        <file alias="about_de_DE.html">dso_about_de_DE.html</file>
+    <qresource prefix="/doc" lang="en_EN">
+        <file alias="about.html">dso_about_en_EN.html</file>
+    </qresource>
+    <qresource prefix="/doc" lang="de_DE">
+        <file alias="about.html">dso_about_de_DE.html</file>
     </qresource>
 </RCC>
