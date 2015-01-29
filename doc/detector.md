@@ -10,4 +10,5 @@ The detector uses the photo-electric effect of a (gamma) quant on a photo diode.
 
 The second OpAmp acts as an (inverting) differentiator and amplifier. This stage is neccessary as there will always be a very small current that flows in the reverse direction, resulting into a small (constant) bias voltage that would then be amplified further. The output of the differentiator can then be captured directly using a sound card and the DSO application. 
 
-Additionally, I added an integrating coparator that drived (via a buffer) a LED and a piezo beeper. The sensitivity of the detector will be set by the 5k potentiometer at the comperator. 
+Additionally, I added an integrating coparator that drives (via the buffer) a LED and a piezo beeper. The sensitivity of the detector will be set by the 5k potentiometer at the comperator. 
+
