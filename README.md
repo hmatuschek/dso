@@ -8,7 +8,7 @@ implements the basic features of a DSO.
  <img src="http://i58.tinypic.com/2ey9ou9.png" border="0" alt="Image and video hosting by TinyPic">
 </a>
 
-Initially, I needed such a software to record the signals of a simple home-brew [radiation detector] I've build. 
+Initially, I needed such a software to record the signals of a simple home-brew [radiation detector](doc/detector.md) I've build. 
 
 
 ## Install
