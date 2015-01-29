@@ -68,6 +68,17 @@ IF(NOT LIBSDR_FOUND)
   add_subdirectory(libsdr/src)
 ENDIF(NOT LIBSDR_FOUND)
 
+#
+# Install logo and .desktop file under Linux:
+#
+IF(UNIX AND NOT APPLE)
+ INSTALL(FILES dist/dso.svg
+         DESTINATION share/icons)
+ INSTALL(FILES dist/dso.desktop
+         DESTINATION share/applications)
+ENDIF(UNIX AND NOT APPLE)
+
+
 # Source distribution packages:
 set(CPACK_PACKAGE_VERSION_MAJOR "0")
 set(CPACK_PACKAGE_VERSION_MINOR "1")
@@ -77,11 +88,5 @@ set(CPACK_SOURCE_PACKAGE_FILE_NAME
   "${CMAKE_PROJECT_NAME}-${CPACK_PACKAGE_VERSION_MAJOR}.${CPACK_PACKAGE_VERSION_MINOR}.${CPACK_PACKAGE_VERSION_PATCH}")
 set(CPACK_SOURCE_IGNORE_FILES
   "/build/;/doc/;/dist/;/.git/;.dat$;.wav$;~$;.qm$;${CPACK_SOURCE_IGNORE_FILES}")
-
-# Configure NSIS installer for windows
-set(CPACK_NSIS_PACKAGE_NAME "DSO")
-set(CPACK_NSIS_DISPLAY_NAME "DSO")
-set(CPACK_NSIS_CONTACT "hmatuschek@gmail.com")
-set(CPACK_PACKAGE_EXECUTABLES dso "DSO")
 
 include(CPack)

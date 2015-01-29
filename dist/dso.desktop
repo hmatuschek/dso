@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Digital Storage Oscilloscope	
+GenericName=Digital Storage Oscilloscope
+Comment=A simple Digital Storage Oscilloscope using libsdr.
+Exec=dso
+Icon=/usr/share/icons/dso.svg
+Type=Application
+Categories=Education;Teaching;
+Terminal=false
+Encoding=UTF-8
