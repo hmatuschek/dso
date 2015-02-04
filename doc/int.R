@@ -3,9 +3,7 @@
 #
 
 # Data
-#X <- as.matrix(read.csv("background.csv", sep="\t"))
-X <- as.matrix(read.csv("DSO-REC-2015-02-02-4.csv", sep="\t"))
-#X <- as.matrix(read.csv("Uranerz_2014-10-01-1.csv.bz2", sep="\t"))
+X <- as.matrix(read.csv("background.csv", sep="\t"))
 
 # Samples per event
 N <- ncol(X);
